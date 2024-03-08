@@ -1,5 +1,5 @@
 # CV
+
 My CV in LaTeX.
 
-
-![CV](/img/CV-CAMPANELLI-EMANUELE)
+<img src="./img/CV-CAMPANELLI-EMANUELE.jpg" width="700"/>
