@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7, 9 August 2023) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{other/altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{other/pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{other/pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{other/sample.bib}
+
+\begin{document}
+\name{Campanelli Emanuele}
+\tagline{Curriculum Vitae}
+%% You can add multiple photos on the left or right
+\photoR{3.0cm}{img/ProfilePicture}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+
+
+\begin{paracol}{2}
+\cvsection{Su di me}
+Sono un giovane di indole curiosa, energica e positiva.\\
+Dedico il mio tempo libero allo studio, alla lettura, allo sport e agli incontri con le persone care.\\
+Nell'ambito sportivo, ho praticato nuoto agonistico per diversi anni, raggiungendo il ruolo di capitano della squadra. Attualmente, mi dedico alla ginnastica artistica da due anni, ottenendo anche un riconoscimento a livello nazionale.\\
+Ho inoltre partecipato a vari spettacoli teatrali, sia circensi che non.
+
+\medskip
+
+\cvsection{Formazione}
+
+\cvevent{\href{www.majoranasanlazzaro.edu.it/}{Istituto di Istruzione Superiore Ettore Majorana}}{Elettronica ed elettrotecnica}{Settembre 2015 -- Luglio 2020}{San Lazzaro di Savena}
+\medskip
+
+\cvevent{\href{https://www.unibo.it/it}{Alma Mater Studiorum - Università di Bologna}}{Informatica}{Novembre 2020 -- Giugno 2023}{Bologna}
+    \begin{itemize}
+        \item \textbf{Nota:} Corso di studi interrotto al termine del terzo anno.
+    \end{itemize}
+\medskip
+
+\cvevent{\href{https://italy.generation.org/sviluppatore-java/}{Corso Generation}}{Java Junion Developer}{Ottobre 2023 -- Febbraio 2024}{Da remoto}
+    \begin{itemize}
+        \item \textbf{Ambito:} Sviluppo web tramite Spring Boot.
+        \item \textbf{Integrazioni:} Lezioni e progetti relativi alle soft skill.
+    \end{itemize}
+\medskip
+
+\cvsection{Esperienze lavorative}
+
+% \cvevent{PHASE di Finelli Fabio e C. \& IMA Group}{Alternanza scuola-lavoro - Ambito elettronico}{Luglio 2018 -- Agosto 2018 \& Marzo 2019 -- Aprile 2019}{}
+% \begin{itemize}
+%     \item Attraverso queste esperienze, ho avuto l'opportunità di comprendere l'ambiente lavorativo di una piccola e di una grande azienda.
+% \end{itemize}
+
+% \divider
+
+\cvevent{Progetti di sviluppo software in team}{Progetti universitari e non}{Da dicembre 2020 in avanti}{}
+\begin{itemize}
+    \item Grazie a queste esperienze ho imparato ad assumere responsabilità lavorative di rilievo, gestendo compiti complessi e rispettando scadenze stringenti.
+    \item In questo contesto, ho affinato le mie capacità di relazionarmi in modo efficace con i colleghi, promuovendo la collaborazione e mantenendo un clima lavorativo positivo. Queste esperienze mi hanno fornito una preziosa comprensione del dinamismo e delle sfide che caratterizzano il mondo dello sviluppo software in team.
+\end{itemize}
+
+\switchcolumn
+
+\cvsection{Info e contatti}
+
+\textcolor[RGB]{139, 0, 0}{\faBirthdayCake{}} 02/12/2001\\
+\vspace{2.5pt}
+\location{\href{https://goo.gl/maps/}{ San Lazzaro di Savena (BO)}}\\
+\vspace{2.5pt}
+\phone{ +39 392 348 5991}\\
+\vspace{2.5pt}
+\email{ emanuele.campanelli.work@gmail.com}\\
+\vspace{2.5pt}
+\linkedin{ emanuele-campanelli-2b32462b3}\\
+\vspace{2.5pt}
+\github{ CampanelliEmanuele}\\
+\vspace{2.5pt}
+\textcolor[RGB]{139, 0, 0}{\faIcon{code}}\href{https://leetcode.com/HumbleUser/}{ Leetcode profile}
+
+\medskip
+
+\cvsection{Hard skill}
+
+\begin{itemize}
+    \item \textbf{Main hard skills:} Java, Spring boot, Thymeleaf, MySQL, SQL, HTML, CSS, Bootstrap 5, Github, OOP. 
+    \item \textbf{Other hard skills:} C++, Python, Flask, JavaFX. 
+\end{itemize}
+
+\cvsection{Soft skill}
+\begin{itemize}
+    \item \textbf{Problem solving}
+    \item \textbf{Team work}
+    \item Organizzazione
+    \item \textbf{Scrum \& Agile}
+    \item \textbf{Autonomia}
+    \item Apprendimento continuo
+    \item Capacità comunicativa
+\end{itemize}
+\medskip
+
+\cvsection{Lingue parlate}
+
+\cvskill{Italiano}{5}
+\vspace{2.5pt}
+\cvskill{Inglese}{3} %% Supports X.5 values.
+\medskip
+
+\cvsection{Progetti sviluppati}
+Il \href{https://github.com/CampanelliEmanuele}{mio profilo Github} "CampanelliEmanuele" funge da portfolio dei progetti sviluppati e a cui ho contribuito.
+\medskip
+
+\end{paracol}
+
+
+\end{document}
